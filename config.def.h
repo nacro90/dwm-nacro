@@ -63,11 +63,13 @@ static const int attachbelow = 1;    /* 1 means attach after the currently activ
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
+	{ "TTT",      bstack },
 	{ "[D]",      deck },
 	{ "[M]",      monocle },
-	/* { "><>",      NULL },    /1* no layout function means floating behavior *1/ */
 	{ "|M|",      centeredmaster },
 	{ ">M>",      centeredfloatingmaster },
+	/* { "><>",      NULL },    /1* no layout function means floating behavior *1/ */
+	/* { "===",      bstackhoriz }, */
 	{ NULL,       NULL },
 };
 
@@ -105,11 +107,22 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      switchcol,      {0} },
 	{ MODKEY|ShiftMask,             XK_l,      zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
+<<<<<<< ours
 	{ MODKEY,                       XK_o,      view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_space,  cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_space,  cyclelayout,    {.i = -1 } },
 	{ MODKEY,                       XK_f,      togglefloating, {0} },
+=======
+	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY,                       XK_space,  setlayout,      {0} },
+	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+>>>>>>> theirs
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
