@@ -37,6 +37,10 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_sel_fg, col_sel_bg, col_sel_border },
 };
 
+static char* const autostart[][2] = { /* please replace 2 with maximum number of arguments from autostart array */
+    { "dwmblocks", NULL },
+};
+
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
