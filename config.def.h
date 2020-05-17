@@ -38,7 +38,7 @@ static const char *colors[][3]      = {
 };
 
 static char* const autostart[][2] = { /* please replace 2 with maximum number of arguments from autostart array */
-    { "st", NULL },
+    { "dwmblocks", NULL },
 };
 
 /* tagging */
