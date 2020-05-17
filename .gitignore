@@ -1,3 +1,5 @@
 *.o
 dwm
 .patch/
+*.orig
+*.rej
